@@ -1,65 +1,46 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 
-export default function Home() {
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
+import RecipeCard from '../components/RecipeCard/RecipeCard';
+
+export default function Index() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <Header title="TreinaCook - Receitas"/>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+       <RecipeCard
+            name="Bolo de Cenoura"
+            category="Bolos"
+            picture="https://img.itdg.com.br/tdg/images/recipes/000/000/023/323619/323619_original.jpg?mode=crop&width=710&height=400"
+            link="/receitas/bolos/bolo-de-cenoura"
+          />
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+        <RecipeCard 
+          name="Brigadeiro"
+          category="Doce"
+          picture="https://cdn.panelinha.com.br/receita/958014000000-Brigadeiro.jpg"
+          link="/receitas/doces/brigadeiro"
+        />
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+        <RecipeCard
+          name="Bolinho de Chuva" 
+          category="Lanches"
+          picture="https://img.itdg.com.br/tdg/images/recipes/000/014/950/329096/329096_original.jpg?mode=crop&width=710&height=400" 
+          link="/receitas/lanches/bolinho-de-chuva"
+        />
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+        <RecipeCard
+          name="Molho Branco" 
+          category="Molhos"
+          picture="https://img.itdg.com.br/tdg/images/recipes/000/044/199/332851/332851_original.jpg?mode=crop&width=710&height=400" 
+          link="/receitas/molhos/molho-branco"
+        />
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Footer />
     </div>
   )
 }
