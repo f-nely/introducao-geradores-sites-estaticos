@@ -21,7 +21,8 @@ export default function Index() {
           name="Brigadeiro"
           category="Doce"
           picture="https://cdn.panelinha.com.br/receita/958014000000-Brigadeiro.jpg"
-          link="/receitas/doces/brigadeiro"
+          link="/receitas/doce
+          /brigadeiro"
         />
 
         <RecipeCard
